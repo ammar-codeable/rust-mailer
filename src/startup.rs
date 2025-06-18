@@ -16,7 +16,5 @@ pub fn run(listener: TcpListener, connection: PgConnection) -> Result<Server, st
     .listen(listener.try_clone()?)?
     .run();
 
-    println!("Server running on {}", listener.local_addr().unwrap());
-
     Ok(server)
 }
